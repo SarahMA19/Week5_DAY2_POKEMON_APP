@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{%  block content  %}
+
+<div class="card" style="width: 18rem;">
+    <div method ="POST" class="card-header">
+        {{ poke_dic['name'] }}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ poke_dic['ability name'] }}</li>
+      <li class="list-group-item">{{ poke_dic['base experience'] }}</li>
+      <li class="list-group-item">{{ poke_dic['front shiny'] }}</li>
+      <li class="list-group-item">{{ poke_dic['hp base stat'] }}</li>
+      <li class="list-group-item">{{ poke_dic['attack base stat'] }}</li>
+      <li class="list-group-item">{{ poke_dic['defense base stat'] }}</li>
+     
+    </ul>
+  </div>
+
+
+
+{%  endblock  %}

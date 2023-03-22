@@ -1,12 +1,9 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired, EqualTo
+from wtforms.validators import DataRequired
 
 class PokemonFinder(FlaskForm):
-    pokemon_name = StringField()
-    ablility_name = StringField()
-    base_experience = StringField()
-    front_shiny = #url
-    hp_base_stat = StringField()
-    attack_base_stat = StringField() / #integers
-    defence_base_stat = StringField() / #integers 
+    pokemon_name = StringField('Enter Pokemon Name Here')
+    submit = SubmitField()
+
+

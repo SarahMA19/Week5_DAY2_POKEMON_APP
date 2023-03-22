@@ -6,45 +6,14 @@
 <h1>This will be the finder for your Pokemon of choice</h1>
 <div class="container">
     <div class="row justify-content-center">
-        <form method="POST" class="col-4">
-            {{ form.hidden_tag()  }}
+        <form method="POST" class="col-2">
+            {{ p_form.hidden_tag()  }}
 
-            {{ form.pokemon_name }}
-            {{ form.ability_name }}
-            {{ form.base_experience}}
-            {{ form.front_shiny}}
-            {{ form.hp_base_stat }}
-            {{ form.attack_base_stat }}
-            {{ form.defence_base_stat }}
-            
-
-
-
-
+            {{ p_form.pokemon_name }}
+            {{ p_form.submit   }}
 
         </form>
     </div>
 </div>
 
-
-{% endblock %}
-<!-- def pokeNewb(poke):
-
-    res = requests.get(f"https://pokeapi.co/api/v2/pokemon/{poke}/")
-    data = res.json()
-    #print(data)
-    
-
-    x = dict()
-    x['name'] = data['name'],
-    x['ability name'] = data['abilities'][0],
-    x['base experience'] = data['base_experience'],
-    x['front shiny'] = data['sprites']['front_shiny'],
-    x['hp base stat'] = data['stats'][0],
-    x['attack base state'] = data['stats'][1],
-    x['defense base stat'] = data['stats'][2]
- 
-    return x
-    
-for x in range(7, 12):
-    print(pokeNewb(f"{x}")) -->
+{% endblock  %}
