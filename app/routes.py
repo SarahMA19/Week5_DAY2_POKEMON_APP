@@ -1,13 +1,12 @@
 from app import app
 
-@app.route('/home')
-def homePage():
-    return{
-        'Hello there' : 'Annoyed'
-    }
+from flask import render_template
 
 @app.route('/')
-def landingPage():
-    return{
-        'you have' : 'LANDED'
-    }
+def homePage():
+    return render_template('index.html')
+
+
+@app.route('/finder')
+def pokemonfinderPage():
+    return render_template('finder.html')
