@@ -7,3 +7,6 @@ class PokemonFinder(FlaskForm):
     submit = SubmitField()
 
 
+    
+
+

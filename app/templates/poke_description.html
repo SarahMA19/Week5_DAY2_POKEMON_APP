@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% include 'nav.html' %}
 
 {%  block content  %}
 
@@ -8,6 +8,7 @@
         {{ poke_dic['name'] }}
     </div>
     <ul class="list-group list-group-flush">
+        {{ p_form.hidden_tag()  }}
       <li class="list-group-item">{{ poke_dic['ability name'] }}</li>
       <li class="list-group-item">{{ poke_dic['base experience'] }}</li>
       <li class="list-group-item">{{ poke_dic['front shiny'] }}</li>
@@ -19,5 +20,23 @@
   </div>
 
 
+<!-- <div class="container">
+    <div class="row justify-content-center">
+        <form method="POST" class="col-4">
+            
+
+            {{ poke_dic['name'] }}
+            {{ poke_dic['ability name'] }}
+            {{ poke_dic['base experience'] }}
+            {{ poke_dic['front shiny'] }}
+            {{ poke_dic['hp base stat'] }}
+            {{ poke_dic['attack base stat'] }}
+            {{ poke_dic['defense base stat'] }}
+            
+
+
+        </form>
+    </div>
+</div> -->
 
 {%  endblock  %}
