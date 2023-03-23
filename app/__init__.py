@@ -21,7 +21,10 @@ app.config.from_object(Config)
 
 db.init_app(app)
 migrate = Migrate(app, db)
+
 login.init_app(app)
+
+login.login_view = 'auth.loginPage'
 
 app.register_blueprint(auth)
 

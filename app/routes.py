@@ -1,6 +1,7 @@
 from app import app
 
 from flask import render_template, request, url_for, redirect
+from flask_login import login_required
 
 from .forms import PokemonFinder
 
@@ -13,6 +14,7 @@ def homePage():
 
 
 @app.route('/finder', methods=['GET','POST'])
+@login_required
 def pokemonfinderPage():
 
     def pokeNewb(poke):
