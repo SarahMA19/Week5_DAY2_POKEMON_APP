@@ -3,40 +3,24 @@
 
 {%  block content  %}
 
-<div class="card" style="width: 18rem;">
-    <div method ="POST" class="card-header">
-        {{ poke_dic['name'] }}
+
+
+<div id="pokecard" class="container" style="width: 18rem;">
+  <img src="{{poke_dic['front shiny']}}" class="card-img-top" alt="...">
+  <div class="row justify-content-center"></div>
+  <div method ="POST" class="card-body">
+    <div class="card-title">{{ poke_dic['name'] }}</div>
+    <div class="card-text">
+       <p>Ability Name: {{poke_dic['ability name']}}</p>
+     <p>Base Experience: {{poke_dic['base experience']}}</p>
+     <p>HP Base Stat: {{poke_dic['hp base stat']}}</p>
+     <p>Attack Base Stat: {{poke_dic['attack base stat']}}</p>
+     <p>Defense Base Stat: {{poke_dic['defense base stat']}}</p>
+     <button type="button" class="button">Select for battle</button>
+     </div>
     </div>
-    <ul class="list-group list-group-flush">
-        {{ p_form.hidden_tag()  }}
-      <li class="list-group-item">{{ poke_dic['ability name'] }}</li>
-      <li class="list-group-item">{{ poke_dic['base experience'] }}</li>
-      <li class="list-group-item">{{ poke_dic['front shiny'] }}</li>
-      <li class="list-group-item">{{ poke_dic['hp base stat'] }}</li>
-      <li class="list-group-item">{{ poke_dic['attack base stat'] }}</li>
-      <li class="list-group-item">{{ poke_dic['defense base stat'] }}</li>
-     
-    </ul>
   </div>
+</div>
 
-
-<!-- <div class="container">
-    <div class="row justify-content-center">
-        <form method="POST" class="col-4">
-            
-
-            {{ poke_dic['name'] }}
-            {{ poke_dic['ability name'] }}
-            {{ poke_dic['base experience'] }}
-            {{ poke_dic['front shiny'] }}
-            {{ poke_dic['hp base stat'] }}
-            {{ poke_dic['attack base stat'] }}
-            {{ poke_dic['defense base stat'] }}
-            
-
-
-        </form>
-    </div>
-</div> -->
 
 {%  endblock  %}

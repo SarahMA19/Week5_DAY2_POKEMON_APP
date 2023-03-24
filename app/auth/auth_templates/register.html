@@ -3,8 +3,8 @@
 {% block content %}
 
 
-<h1>This will be the signup/register page!</h1>
-<div class="container">
+<h1 class="register-greeting">Get excited, register below!</h1>
+<div class="register-container">
     <div class="row justify-content-center">
         <form method="POST" class="col-4">
             {{ form.hidden_tag() }}
@@ -13,7 +13,7 @@
             {{ form.email(class='form-control', placeholder='Email') }}
             {{ form.password(class='form-control', placeholder='Password') }}
             {{ form.confirm_password(class='form-control', placeholder='Confirm Password') }}
-            {{ form.submit(class='btn btn-primary', placeholder='Submit') }}
+            {{ form.submit(class='button', placeholder='Submit') }}
 
         </form>
 

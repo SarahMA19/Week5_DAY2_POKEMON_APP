@@ -23,16 +23,17 @@ def pokemonfinderPage():
         data = res.json()
         #print(data)
         
-        x = dict()
-        x['name'] = data['name'],
-        x['ability name'] = data['abilities'][0],
-        x['base experience'] = data['base_experience'],
-        x['front shiny'] = data['sprites']['front_shiny'],
-        x['hp base stat'] = data['stats'][0],
-        x['attack base stat'] = data['stats'][1],
-        x['defense base stat'] = data['stats'][2]
-    
+        x = {}
+        x["name"] = data["name"]
+        x['ability name'] = data['abilities'][0]['ability']['name']
+        x['base experience'] = data['base_experience']
+        x['front shiny'] = data['sprites']['front_shiny']
+        x['hp base stat'] = data['stats'][0]['base_stat']
+        x['attack base stat'] = data['stats'][1]['base_stat']
+        x['defense base stat'] = data['stats'][2]['base_stat']
         return x
+    
+        
     
     p_form = PokemonFinder()
     if request.method == 'POST':
