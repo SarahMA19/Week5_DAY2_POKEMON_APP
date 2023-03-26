@@ -1,11 +1,13 @@
 
+
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Modern Antiqua;
     background-color: #F7F1E5;
 }
 
 #pokecard{
-    font-family: Modern Antiqua;
+    
     background-color: #E7B10A;
     margin-top: 100px;
     border-radius: 10px;
@@ -16,84 +18,60 @@ body{
     padding-bottom:50px;
     font-size: xx-large;
     text-align: center;
+    font-weight: bold;
 }
 
 .card-text{
     text-align: center;
+    font-size: large;
 }
 
 
-
-
 .button{
-    font-family: Modern Antiqua;
+    
     background-color: #4C4B16;
     outline: transparent;
     border-radius: 5px;
     margin-top: 20px;
     color: #F7F1E5;
-    outline: transparent;
-    
+    height: 40px;
+    width: 110px;
+    font-size: large;
+
 }
+
+
 
 .button:hover{
-    background-color: #898121;
-    color:#F7F1E5;
+    background-color: #E7B10A;
+    color:  #4C4B16;
     outline: transparent;
 }
-
 
 
 .form-control{
-    font-family: Modern Antiqua;
     border-radius: 5px;
     margin-top: 10px;
-  
 
 }
 
-#nav{
-    font-family: Modern Antiqua;
-    
-}
+
 .col-4{
     padding-top: 50px;
 }
 
-.register-greeting{
-    font-family: Modern Antiqua;
+.register-greeting, .login-greeting, .home-greeting, .finder-greeting{
     color: black;
     display: flex;
     justify-content: center;
-    margin-top: 101px;
+    margin-top: 100px;
     margin-bottom: 30px;
 }
 
 
-.login-greeting{
-    font-family: Modern Antiqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 30px;
+.entry{
+    text-align: center;
+    min-height: 400px;  
+    position: relative;
+    overflow: hidden;
 }
-
-.home-greeting{
-    font-family: Modern Antiqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.finder-greeting{
-    font-family: Modern Antiqua;
-    color: black;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-

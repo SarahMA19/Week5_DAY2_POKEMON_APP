@@ -3,13 +3,13 @@
 
 {%  block content  %}
 
-<h1 class="finder-greeting">Search your Pokemon of choice</h1>
+<h1 class="finder-greeting">Search for your Pokemon of choice</h1>
 <div class="container">
     <div class="row justify-content-center">
-        <form method="POST" class="col-2">
+        <form method="POST" class="col-4 ">
             {{ p_form.hidden_tag()  }}
 
-            {{ p_form.pokemon_name(class='form-control') }}
+            {{ p_form.pokemon_name(class='form-control', placeholder='Pokemon Name') }}
             {{ p_form.submit(class='button', placeholder='Submit')   }}
 
         </form>
