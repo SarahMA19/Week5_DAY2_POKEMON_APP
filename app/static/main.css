@@ -2,6 +2,8 @@
 
 
 body{
+    margin: 0;
+    padding: 0;
     font-family: Modern Antiqua;
     background-color: #F7F1E5;
 }
@@ -74,4 +76,27 @@ body{
     min-height: 400px;  
     position: relative;
     overflow: hidden;
+}
+
+.con{
+    margin-top: 200px;
+}
+
+h2{
+    text-align: center;
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+
+@keyframes spinning {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+.spin {
+  animation-name: spinning;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin-top: 100px;
 }
