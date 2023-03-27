@@ -30,7 +30,6 @@ body{
 
 
 .button{
-    
     background-color: #4C4B16;
     outline: transparent;
     border-radius: 5px;
@@ -38,6 +37,18 @@ body{
     color: #F7F1E5;
     height: 40px;
     width: 110px;
+    font-size: large;
+
+}
+
+.button1{
+    background-color: #4C4B16;
+    outline: transparent;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: #F7F1E5;
+    height: 60px;
+    width: 200px;
     font-size: large;
 
 }
@@ -86,17 +97,12 @@ h2{
     text-align: center;
     margin-top: 100px;
     font-weight: bold;
+    font-size: 65px;
 }
+img {
+    transition: transform .7s ease-in-out;
+  }
 
-
-@keyframes spinning {
-  from { transform: rotate(0deg) }
-  to { transform: rotate(360deg) }
-}
-.spin {
-  animation-name: spinning;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  margin-top: 100px;
+img:hover{
+    transform: rotate(360deg) ;
 }
