@@ -1,12 +1,14 @@
-import requests
+import requests, json
+
 
 
 def pokeNewb(poke):
 
-        res = requests.get(f"https://pokeapi.co/api/v2/pokemon/{poke}/")
+    res = requests.get(f"https://pokeapi.co/api/v2/pokemon/{poke}/")
+    if res.ok:
         data = res.json()
         #print(data)
-        
+    
         x = {}
         x["name"] = data["name"]
         x['ability_name'] = data['abilities'][0]['ability']['name']
@@ -16,4 +18,3 @@ def pokeNewb(poke):
         x['attack_base_stat'] = data['stats'][1]['base_stat']
         x['defense_base_stat'] = data['stats'][2]['base_stat']
         return x
-    

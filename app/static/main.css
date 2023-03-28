@@ -48,7 +48,7 @@ body{
     margin-top: 20px;
     color: #F7F1E5;
     height: 100px;
-    width: 400px;
+    width: 100px;
     font-size: large;
 
 }
@@ -56,6 +56,12 @@ body{
 
 
 .button:hover{
+    background-color: #E7B10A;
+    color:  #4C4B16;
+    outline: transparent;
+}
+
+.button1:hover{
     background-color: #E7B10A;
     color:  #4C4B16;
     outline: transparent;

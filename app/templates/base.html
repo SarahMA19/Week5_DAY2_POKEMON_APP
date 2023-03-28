@@ -12,11 +12,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
   
+  {% block css%}
 
-
+  {%  endblock %}
 </head>
 <body>
 {% include 'nav.html' %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+  
+      {% for c, m in messages %}
+
+      <div class="alert alert-{{ c }} alert-dismissible fade show" role="alert">
+        <strong>{{ m }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+      <!-- why does the alert button look so strange?! -->
+
+      
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 {% block content%}
 
