@@ -6,21 +6,46 @@
 
 
 <div id="pokecard" class="container" style="width: 18rem;">
-  <img src="{{poke_dic['front shiny']}}" class="card-img-top" alt="...">
+  <img src="{{p['front shiny'] }}" class="card-img-top" alt="...">
   <div class="row justify-content-center"></div>
   <div method ="POST" class="card-body">
-    <div class="card-title">{{ poke_dic['name'] }}</div>
+    <div class="card-title">{{ p['name'] }}</div>
     <div class="card-text">
-     <p>Ability Name: {{poke_dic['ability name']}}</p>
-     <p>Base Experience: {{poke_dic['base experience']}}</p>
-     <p>HP Base Stat: {{poke_dic['hp base stat']}}</p>
-     <p>Attack Base Stat: {{poke_dic['attack base stat']}}</p>
-     <p>Defense Base Stat: {{poke_dic['defense base stat']}}</p>
-     <button class= 'button1' type="button">Select for Battle</button>
-     </div>
+     <p>Ability Name: {{p['ability name']}}</p>
+     <p>Base Experience: {{p['base experience']}}</p>
+     <p>HP Base Stat: {{p['hp base stat']}}</p>
+     <p>Attack Base Stat: {{p['attack base stat']}}</p>
+     <p>Defense Base Stat: {{p['defense base stat']}}</p>
+     <a class="button1" href="{{ url_for('release', poke_id=p.id) }}">Release</a>
+     <a class="button1" href="{{ url_for('catch', poke_id=p.id) }}">Catch</a>
+
+    
+    
+<!--     
+      {% for p in Pokemon %}
+
+      {% if u.username == current_user.username %}
+
+      {% elif u.flag %} 
+        <a class="button1" href="{{ url_for('battlePage', user_id=u.id) }}">Release</a>
+     
+      {% else %}
+        <a class="button1" href="{{ url_for('battlePage', user_id=u.id) }}">Catch</a>
+     
+     
+      {% endif %}
+      {% endfor %} -->
+    
+    
+    
+    </div>
     </div>
   </div>
 </div>
+
+
+
+
 
 
 {%  endblock  %}
