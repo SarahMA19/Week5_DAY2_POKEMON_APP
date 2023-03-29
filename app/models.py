@@ -20,6 +20,7 @@ class Pokemon(db.Model):
     hp_base_stat = db.Column(db.String, nullable=False)
     attack_base_stat = db.Column(db.String, nullable=False)
     defense_base_stat = db.Column(db.String, nullable=False)
+    caught = db.Column(db.Boolean)
 
     def __init__(self, name, base_experience, front_shiny, hp_base_stat, attack_base_stat, defense_base_stat):
         self.name = name
