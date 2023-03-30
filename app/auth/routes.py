@@ -3,7 +3,7 @@ from flask_login import current_user, login_user, logout_user
 from werkzeug.security import check_password_hash
 
 from .forms import SignUpForm, LoginForm
-from ..models import User
+from ..models import User, Pokemon
 
 auth = Blueprint('auth', __name__, template_folder = 'auth_templates')
 
@@ -58,3 +58,7 @@ def registerPage():
 def logOut():
     logout_user()
     return redirect(url_for('homePage'))
+
+
+
+

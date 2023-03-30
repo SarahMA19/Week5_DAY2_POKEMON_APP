@@ -13,20 +13,19 @@
     <div class="card-text">
      <p>Ability Name: {{ p['ability_name'] }}</p>
      <p>Base Experience: {{ p['base_experience'] }}</p>
-     <p>HP Base Stat: {{ p['hp base_stat'] }}</p>
+     <p>HP Base Stat: {{ p['hp_base_stat'] }}</p>
      <p>Attack Base Stat: {{ p['attack_base_stat'] }}</p>
      <p>Defense Base Stat: {{ p['defense_base_stat'] }}</p>
 
-     {% if p.caught == current_user %}
-     <a class="btn btn-danger" href="{{ url_for('release', poke_id=p.id) }}">Release</a>
-     
-     {% endif %}
+    
+     {% if not p.caught and not full  %}
+     <!-- <h2>This only works and goes to release if they are full</h2> -->
+     <a class="btn" href="{{ url_for('catch', poke_id=p.id) }}">Catch</a>
+    
+    {%  elif p['name'] in teamlist  %}
+     <a class="btn" href="{{ url_for('release', poke_id=p.id) }}">Release</a>
 
-     {% if not p.caught  %}
-     <a class="btn btn-primary" href="{{ url_for('catch', poke_id=p.id) }}">Catch</a>
-      
-     {% endif %}
-
+      {% endif %}
     </div>
     </div>
   </div>
